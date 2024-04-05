@@ -3,12 +3,13 @@ import Modal from './Modal.jsx';
 function App() {
     const [isOpen, setIsOpen] = useState(true);
     function handleModal() {
-        setIsOpen(!isOpen);
+        setIsOpen((is) => !is);
     }
     return ( 
     <>
         <button onClick={handleModal} className="close">&times;</button>
         { isOpen ? <Modal/> : <h1>Modal closed</h1> } 
+        
     </>
     )
 }
